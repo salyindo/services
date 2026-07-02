@@ -23,3 +23,9 @@ function saveClient(){
     $clients []=$newClient;
 
 }
+
+function listerClientsSansCommande(): void {
+    global $clients, $commandes;
+    $clientsSansCommande = getClientsSansCommande($clients, $commandes);
+    afficherClients($clientsSansCommande);
+}
